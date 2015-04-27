@@ -1,0 +1,34 @@
+{
+    "name": "chrisguitarguy/wordpress-skeleton",
+    "description": "WordPress, Composer, and S3",
+    "keywords": ["wordpress"],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ], 
+    "require": {
+        "php": ">=5.5",
+        "composer/installers": "~1.0",
+        "johnpbloch/wordpress": "~4.2",
+        "wpackagist-plugin/wordpress-seo": "2.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chrisguitarguy\\Skeleton\\ExamplePlugin\\": "web/content/plugins/example/inc/"
+        },
+        "files": [
+            "web/content/plugins/example/inc/functions.php"
+        ]
+    },
+    "extra": {
+        "wordpress-install-dir": "web/wp",
+        "installer-paths": {
+            "web/content/plugins/{$name}": ["type:wordpress-plugin"],
+            "web/content/themes/{$name}": ["type:wordpress-theme"],
+            "web/content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
+        }
+    }
+}
