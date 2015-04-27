@@ -46,6 +46,15 @@ here with the WordPress SEO plugin which is ignored in `.gitignore`:
 /web/content/plugins/wordpress-seo
 ```
 
+## You're Missing {X} From `wp-config.php`
+
+Correct. This is meant to get you started, not make all the choices for you.
+
+The various [salts](https://api.wordpress.org/secret-key/1.1/salt/) are missing,
+for example. You could add those yourself to another file and `include` it from
+`wp-config.php` or let WordPress generated them for you and save them in the
+database (what happens when they are missing).
+
 ## WHY?!
 
 Because composer is nice and WordPress needs a good dose of modern development
