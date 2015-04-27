@@ -23,6 +23,8 @@ define('DB_CHARSET', empty($dbArgs['charset']) ? 'utf8' : $dbArgs['charset']);
 define('DB_COLLATE', empty($dbArgs['collate']) ? '' : $dbargs['collate']);
 
 define('WP_DEBUG', filter_var(getenv('DEBUG'), FILTER_VALIDATE_BOOLEAN));
+define('DISALLOW_FILE_MODS', true);
+define('AUTOMATIC_UPDATER_DISABLED', true);
 
 $isSsl = filter_var(empty($_SERVER['HTTPS']) ? false : $_SERVER['HTTPS'], FILTER_VALIDATE_BOOLEAN);
 define('WP_CONTENT_DIR', __DIR__.'/content');
